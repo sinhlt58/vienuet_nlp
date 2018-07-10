@@ -1,0 +1,7 @@
+# numpy
+# spacy
+# nltk
+# tensorflow
+# tensorflow-hub
+# sentencepiece
+chatterbot
