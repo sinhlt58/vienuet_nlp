@@ -1,0 +1,10 @@
+categories:
+- greeting
+conversations:
+- - hi
+  - hello
+  - how are you?
+  - i am good
+- - hello
+  - hi. How are you
+  - i am good

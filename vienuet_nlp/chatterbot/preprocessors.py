@@ -3,19 +3,16 @@ Statement pre-processors.
 """
 
 
-def spacy_preprocess(chatbot, statement):
+def preprocess_vi(chatbot, statement):
     """
     Remove any consecutive whitespace characters from the statement text.
     """
     import re
+    import pyvi.ViTokenizer as tokenizer
 
-    # Replace linebreaks and tabs with spaces
-    statement.text = statement.text.replace('\n', ' ').replace('\r', ' ').replace('\t', ' ')
+    tokenized_text = tokenizer.tokenize(statement.text)
+    statement.add_extra_data('tokenized_text', tokenized_text)
 
-    # Remove any leeding or trailing whitespace
-    statement.text = statement.text.strip()
-
-    # Remove consecutive spaces
-    statement.text = re.sub(' +', ' ', statement.text)
+    #statement.text = statement.text.lower()
 
     return statement
