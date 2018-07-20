@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 with open('requirements.txt') as requirements:
     REQUIREMENTS = requirements.readlines()
 
-VIENUET_NLP  = __import__('chatterbot')
+VIENUET_NLP  = __import__('vienuet_nlp')
 VERSION      = VIENUET_NLP.__version__
 AUTHOR       = VIENUET_NLP.__author__
 AUTHOR_EMAIL = VIENUET_NLP.__email__
